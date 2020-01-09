@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hs.activity">
+
+    <application
+        android:name="glide.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="hs.activity.TTRecyclerView.MainAct"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+<!--         android:name="glide.activity.MainActivity"-->
+        <!-- android:name=".Broadcast.BroadcastActivity" -->
+        <!-- android:name=".BreakpointDownload.DownloadActivity" -->
+        <!-- android:name="event.dispatch.MainActivity" -->
+        <!-- android:name=".webView.WebActivity" -->
+        <!-- android:name="handler.HandlerTest" -->
+        <!-- android:name="glide.activity.GlideTestActivity" -->
+        <activity android:name="glide.activity.SecondActivity" />
+
+        <provider
+            android:name=".ContentProvider.AccountProvider"
+            android:authorities="com.hs.provider"
+            android:exported="true" />
+        <service
+            android:name=".RemoteService2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hs.remoteService2" />
+                <!-- 隐式调用 -->
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".RemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hs.remoteService" />
+                <!-- 隐式调用 -->
+            </intent-filter>
+        </service>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="hs.permission.test" />
+
+</manifest>

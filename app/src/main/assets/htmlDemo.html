@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>  
+		<title>Android/Javascript互调Demo</title>
+		<script type="text/javascript" language="javascript">
+			function  callJavaScriptMethod() {
+				document.getElementById("content").innerHTML = "Android调用JS成功";
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div style="margin:50px 50px 50px 50px;" id="content"></div>
+		<div ><a onClick="window.injectedObject.callJavaMethod()" href="">点击-->JS调用Android代码</a></div>
+	</body>
+</html> 
