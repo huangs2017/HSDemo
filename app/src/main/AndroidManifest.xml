@@ -11,17 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="hs.activity.TTRecyclerView.MainAct"
+            android:name="eventbus.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
 
-<!--         android:name="glide.activity.MainActivity"-->
+        <!-- android:name="eventbus.MainActivity" -->
+        <!--  android:name="glide.activity.MainActivity"-->
         <!-- android:name=".Broadcast.BroadcastActivity" -->
         <!-- android:name=".BreakpointDownload.DownloadActivity" -->
         <!-- android:name="event.dispatch.MainActivity" -->
@@ -29,6 +29,7 @@
         <!-- android:name="handler.HandlerTest" -->
         <!-- android:name="glide.activity.GlideTestActivity" -->
         <activity android:name="glide.activity.SecondActivity" />
+        <activity android:name="eventbus.SecondActivity" />
 
         <provider
             android:name=".ContentProvider.AccountProvider"
