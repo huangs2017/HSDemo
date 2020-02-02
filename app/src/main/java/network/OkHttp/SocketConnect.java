@@ -43,7 +43,6 @@ public class SocketConnect {
                 socket = new Socket();
             }
             socket.connect(new InetSocketAddress(url.host, url.port));
-
         }
     }
 

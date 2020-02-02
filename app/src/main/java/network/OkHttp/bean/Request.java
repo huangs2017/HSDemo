@@ -21,7 +21,7 @@ public class Request {
 
 
     //---------------------------------------------------------------
-    // 构建者模式，不必了解数据细节
+    // 建造者模式
     public final static class Builder {
 
         String method;

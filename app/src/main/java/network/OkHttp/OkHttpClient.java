@@ -11,6 +11,7 @@ public class OkHttpClient {
         this(new Builder());
     }
 
+    // 建造者模式
     public OkHttpClient(Builder builder) {
         dispatcher = builder.dispatcher;
         connectionPool = builder.connectionPool;
