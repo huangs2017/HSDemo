@@ -2,7 +2,7 @@ package handler;
 
 public final class Looper {
 
-    static ThreadLocal<Looper> threadLocal = new ThreadLocal<Looper>();
+    static ThreadLocal<Looper> threadLocal = new ThreadLocal<>();
     MessageQueue mQueue;
 
 
