@@ -10,6 +10,8 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import util.Log;
+
 public class TCPClient {
 
 	static Socket client;
@@ -25,7 +27,7 @@ public class TCPClient {
 
 		// 响应信息
 		String result = in.readUTF();
-		System.out.println("服务端返回结果：" + result);
+		Log.i("服务端返回结果：" + result);
 
 		client.close();
 
@@ -46,7 +48,7 @@ public class TCPClient {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inStream));
 		String str1 = null;
 		while ((str1 = reader.readLine()) != null) {
-			System.out.println(str1);
+			Log.i(str1);
 		}
 	}
 
@@ -64,9 +66,9 @@ public class TCPClient {
 
 		InputStream inStream = client.getInputStream();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(inStream));
-		String str1 = null;
+		String str1;
 		while ((str1 = reader.readLine()) != null) {
-			System.out.println(str1);
+			Log.i(str1);
 		}
 	}
 

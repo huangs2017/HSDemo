@@ -6,6 +6,8 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import util.Log;
+
 public class LongConnectionTest {
 
     public static void main(String[] args) throws IOException {
@@ -26,7 +28,7 @@ public class LongConnectionTest {
             String str = "name=hs" + i;
             byte[] bs = str.getBytes();
             out.write(bs);
-            System.out.println(bs.length + "-->" + i++);
+            Log.i(bs.length + "-->" + i++);
             try {
                 Thread.sleep(1000 * 10);
             } catch (InterruptedException e) {
@@ -38,7 +40,7 @@ public class LongConnectionTest {
             byte[] b = new byte[1024];
             while ((len = in.read(b)) != -1) {
                 String s = new String(b, 0, len, "UTF-8");
-                System.out.println(s);
+                Log.i(s);
             }
         }
 
