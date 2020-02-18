@@ -3,7 +3,7 @@ package juc;
 import java.util.concurrent.CountDownLatch;
 import Util.Log;
 
-public class CountDownLatchTest {
+public class CountDownLatch_Test {
 
     public static void main(String[] args) {
 

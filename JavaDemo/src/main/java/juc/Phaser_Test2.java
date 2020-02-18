@@ -5,14 +5,35 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import Util.Log;
 
-// Phaser简单使用
-public class PhaserDemo1 {
+// Phaser中onAdvance方法的使用: 到达每个阶段执行
+public class Phaser_Test2 {
 
     public static void main(String[] args) throws InterruptedException {
-        Phaser phaser = new Phaser(2); // Phaser(2)代表注册的party数量, 不传入默认为0
+        Phaser phaser = new MyPhaser(2, 3);
+        Log.i("需要参与者数量：" + phaser.getRegisteredParties());
         new Runner(phaser).start();
         Thread.sleep(ThreadLocalRandom.current().nextInt(1000));
         new Runner(phaser).start();
+    }
+
+
+
+    static class MyPhaser extends Phaser {
+
+        private int totalPhaseNum;        //总计阶段数量
+
+        public MyPhaser(int parties, int totalPhaseNum) {
+            super(parties);
+            this.totalPhaseNum = totalPhaseNum;
+        }
+
+//       到达每个阶段执行
+        @Override
+        protected boolean onAdvance(int phase, int registeredParties) {
+            System.out.println("phase " + phase + " is over, registeredParties is " + registeredParties);
+            //如果已经到达了最后一个阶段，或者参与者为0，则结束
+            return (totalPhaseNum - 1) == phase || registeredParties == 0;
+        }
     }
 
 
@@ -22,7 +43,7 @@ public class PhaserDemo1 {
         private Phaser phaser;
 
         public Runner(Phaser phaser) {
-            this.phaser = phaser;        // 多个线程必须持有同一个phaser
+            this.phaser = phaser;
         }
 
         @Override
@@ -40,7 +61,6 @@ public class PhaserDemo1 {
                 e.printStackTrace();
             }
         }
-
     }
 
 

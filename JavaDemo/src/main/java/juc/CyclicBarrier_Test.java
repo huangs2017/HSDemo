@@ -4,7 +4,7 @@ import java.util.concurrent.CyclicBarrier;
 
 import Util.Log;
 
-public class CyclicBarrierTest {
+public class CyclicBarrier_Test {
 
     public static void main(String[] args) throws Exception{
         CyclicBarrier barrier = new CyclicBarrier(3);
