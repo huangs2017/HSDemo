@@ -2,6 +2,7 @@ package hs.activity;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.os.SystemClock;
 import util.Log;
 
 public class IntentService_Test extends IntentService {
@@ -12,14 +13,15 @@ public class IntentService_Test extends IntentService {
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
-        Log.e("Thread--> " + Thread.currentThread().getName());
+    protected void onHandleIntent(Intent intent) { // 在子线程执行
+        SystemClock.sleep(1000 * 5);
+        Log.e("ThreadName：" + Thread.currentThread().getName() + "  ThreadId：" +  Thread.currentThread().getId());
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.i("startId-------->" + startId);
-        Log.i("Thread--> " + Thread.currentThread().getName());
+        Log.i("startId-->" + startId);
+        Log.i("ThreadName：" + Thread.currentThread().getName());
         return super.onStartCommand(intent, flags, startId);
     }
 }
