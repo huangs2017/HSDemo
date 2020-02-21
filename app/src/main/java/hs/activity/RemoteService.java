@@ -13,6 +13,7 @@ import java.util.Map;
 import hunter.BinderTest;
 import hunter.Book;
 import hunter.Student;
+import util.Log;
 
 //进程间的通讯，可以采取Aidl，Messenger，ContentProvider，Broadcast等方式。
 public class RemoteService extends Service {
@@ -62,25 +63,25 @@ public class RemoteService extends Service {
             map.put(student2, bookList2);
 
 
-            System.out.println("--------" + student);
-            System.out.println("--------" + student1);
-            System.out.println("========" + map.get(student));
-            System.out.println("========" + map.get(student1));
-            System.out.println("~~~~~~~~" + student.equals(student1));
+            Log.i("--------" + student);
+            Log.i("--------" + student1);
+            Log.i("========" + map.get(student));
+            Log.i("========" + map.get(student1));
+            Log.i("~~~~~~~~" + student.equals(student1));
 
             return map.get(student2);
         }
 
         @Override
         public void getStudent(Student student) throws RemoteException {
-            System.out.println("服务器out： " + student);
+            Log.i("服务器out： " + student);
             student.name = "王五";
             student.age = 23;
         }
 
         @Override
         public void getStudentWithInOutTag(Student student) throws RemoteException {
-            System.out.println("服务器inout： " + student);
+            Log.i("服务器inout： " + student);
             student.name = "小六";
             student.age = 24;
         }
