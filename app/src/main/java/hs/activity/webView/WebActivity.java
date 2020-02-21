@@ -12,7 +12,7 @@ import hs.activity.R;
 public class WebActivity extends Activity {
 
     private Button button;
-    private WebView webView;
+    private WebView webView; // WebView内存优化：放到单独进程中
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
