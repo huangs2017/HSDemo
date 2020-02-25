@@ -1,4 +1,4 @@
-package Singleton;
+package 笔试题.Singleton;
 
 // 静态内部类实现方式（可延时加载）
 public class SingletonInner {

@@ -1,4 +1,4 @@
-package Singleton;
+package 笔试题.Singleton;
 
 public class Singleton1 {
 

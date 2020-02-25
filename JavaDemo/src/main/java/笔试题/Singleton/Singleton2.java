@@ -1,4 +1,4 @@
-package Singleton;
+package 笔试题.Singleton;
 
 // 懒汉式 + 双重检测锁
 public class Singleton2 {

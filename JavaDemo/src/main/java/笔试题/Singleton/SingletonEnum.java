@@ -1,4 +1,4 @@
-package Singleton;
+package 笔试题.Singleton;
 
 // 使用枚举实现单例模式
 public enum SingletonEnum {
