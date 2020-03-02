@@ -2,31 +2,17 @@ package component.Service;
 
 import android.app.Service;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 
-import component.Broadcast.FinalReceiver;
-
 public class RemoteService2 extends Service {
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-        FinalReceiver myBroadcastReceiver = new FinalReceiver();
-        registerReceiver(myBroadcastReceiver, intentFilter);
-
-        Intent intent = new Intent("android.net.conn.CONNECTIVITY_CHANGE");
-        sendBroadcast(intent); // 发送广播
-
-        unregisterReceiver(myBroadcastReceiver);
-
     }
 
     @Override
