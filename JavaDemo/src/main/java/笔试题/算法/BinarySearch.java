@@ -1,5 +1,6 @@
 package 笔试题.算法;
 
+// 有序数组中查找目标值，如果存在返回下标，否则返回 -1。
 public class BinarySearch {
 
     public int binarySearch(int[] nums, int target) {

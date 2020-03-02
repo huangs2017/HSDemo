@@ -1,4 +1,4 @@
-package hs.activity.ContentProvider;
+package component.ContentProvider;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -6,7 +6,6 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.os.Bundle;
 
 public class AccountProvider extends ContentProvider {
 

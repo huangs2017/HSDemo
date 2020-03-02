@@ -1,4 +1,4 @@
-package hs.activity.Broadcast;
+package component.Broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

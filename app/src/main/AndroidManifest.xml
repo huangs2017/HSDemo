@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="component.Service.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +32,11 @@
         <activity android:name="eventbus.SecondActivity" />
 
         <provider
-            android:name=".ContentProvider.AccountProvider"
+            android:name="component.ContentProvider.AccountProvider"
             android:authorities="com.hs.provider"
             android:exported="true" />
         <service
-            android:name=".RemoteService2"
+            android:name="component.Service.RemoteService2"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.hs.remoteService2" />
@@ -45,14 +45,14 @@
         </service>
 
         <service
-            android:name=".RemoteService"
+            android:name="component.Service.RemoteService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.hs.remoteService" />
                 <!-- 隐式调用 -->
             </intent-filter>
         </service>
-        <service android:name=".IntentService_Test" />
+        <service android:name="component.Service.IntentService_Test" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

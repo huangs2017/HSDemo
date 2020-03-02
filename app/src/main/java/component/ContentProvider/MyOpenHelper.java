@@ -1,4 +1,4 @@
-package hs.activity.ContentProvider;
+package component.ContentProvider;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

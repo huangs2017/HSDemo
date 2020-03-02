@@ -1,4 +1,4 @@
-package hs.activity.ContentProvider;
+package component.ContentProvider;
 
 import android.database.Cursor;
 import android.net.Uri;

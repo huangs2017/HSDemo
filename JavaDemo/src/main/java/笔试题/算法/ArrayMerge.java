@@ -1,7 +1,7 @@
 package 笔试题.算法;
 
 
-//两个有序数组 合并成一个有序数组
+//两个有序数组 合成一个有序数组
 public class ArrayMerge {
 
     public static void main(String[] args) {

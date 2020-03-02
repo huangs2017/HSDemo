@@ -1,4 +1,4 @@
-package hs.activity;
+package component.Service;
 
 import android.app.Service;
 import android.content.Intent;
