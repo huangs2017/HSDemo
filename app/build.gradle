@@ -14,12 +14,7 @@ android {
         }
     }
 
-    // aidl中有自定义类型，要加这一句
-    sourceSets {
-        main {
-            java.srcDirs = ['src/main/java', 'src/main/aidl']
-        }
-    }
+    namespace 'hs.activity'
 }
 
 dependencies {
