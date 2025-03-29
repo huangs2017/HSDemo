@@ -6,7 +6,6 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -20,7 +19,6 @@
 
         <!-- android:name="eventbus.MainActivity" -->
         <!--  android:name="glide.activity.MainActivity"-->
-        <!-- android:name=".Broadcast.BroadcastActivity" -->
         <!-- android:name=".BreakpointDownload.DownloadActivity" -->
         <!-- android:name="event.dispatch.MainActivity" -->
         <!-- android:name=".webView.WebActivity" -->
@@ -36,12 +34,11 @@
 
         <service android:name="component.Service.IntentService_Test" />
     </application>
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
-    <uses-permission android:name="hs.permission.test" />
 
 </manifest>

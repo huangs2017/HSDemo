@@ -8,8 +8,8 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
         android:onClick="bind"
         android:text="bind" />
 
