@@ -23,7 +23,7 @@ public final class Looper {
         for (;;) {
             Message msg = queue.next();
             if (msg == null) { //----------------
-                continue;
+                return;
             }
             msg.target.dispatchMessage(msg);
         }
