@@ -15,7 +15,7 @@ public class MessageQueue2 {
     Condition notEmpty;
     Condition notFull;
 
-    public MessageQueue2(){
+    public MessageQueue2() {
         this.items = new Message[50]; // 限定空间大小，节省内存
         this.lock = new ReentrantLock();
         this.notEmpty = lock.newCondition();

@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class MessageQueue {
 
-    BlockingQueue<Message> queue= new ArrayBlockingQueue<>(2);
+    BlockingQueue<Message> queue = new ArrayBlockingQueue<>(2);
 
     // 入队 （生产者）
     public void enqueueMessage(Message msg) {
@@ -26,6 +26,5 @@ public class MessageQueue {
         }
         return msg;
     }
-
 
 }
