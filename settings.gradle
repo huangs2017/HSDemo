@@ -1,1 +1,2 @@
 include ':app', ':JavaDemo'
+include ':WebSocketDemo'
