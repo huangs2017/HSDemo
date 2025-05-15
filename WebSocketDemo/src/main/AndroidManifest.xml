@@ -19,8 +19,7 @@
             </intent-filter>
         </activity>
 
-        <!--需要在这里注册WebSocketService-->
-        <service android:name=".websocketservice.WebSocketService" />
+        <service android:name=".service.MyService" />
     </application>
 
 </manifest>

@@ -6,10 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import test.demo.databinding.ActivityMainBinding
-import test.demo.websocketservice.MyViewModel
-import test.demo.websocketservice.WebSocketService
-import test.demo.websocketservice.ConnectStatus
-
+import test.demo.service.MyViewModel
+import test.demo.service.MyService
+import test.demo.service.ConnectStatus
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.actionButton.setOnClickListener {
             if (viewModel.status.value != ConnectStatus.CONNECTED) {
                 val url = binding.addressEditText.text.toString()
-                val intent = Intent(this, WebSocketService::class.java)
+                val intent = Intent(this, MyService::class.java)
                 intent.putExtra("serverAddress", url)
                 startService(intent)
             } else {
@@ -77,6 +76,5 @@ class MainActivity : AppCompatActivity() {
         const val SENDER_SERVER = 1 // 发送方：服务端（远端）
         const val SENDER_CLIENT = 2 // 发送方：客户端（本机）
     }
-
 
 }

@@ -1,4 +1,4 @@
-package test.demo.websocketservice
+package test.demo.service
 
 import android.content.Intent
 import android.util.Log
@@ -12,7 +12,7 @@ import okhttp3.WebSocketListener
 /**
  * 通过ViewModel进行发送/接收数据的传递
  */
-class WebSocketService : LifecycleService() {
+class MyService : LifecycleService() {
 
     private val viewModel = MyViewModel
     private lateinit var webSocket: WebSocket
